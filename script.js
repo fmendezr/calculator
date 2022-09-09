@@ -2,6 +2,7 @@ let num1 = [0];
 let num2 = [];
 let  operator = null; 
 
+// make operations with two numbers
 const operate = (operand, numA = num1, numB = num2) => {
     switch (operand) {
         case "add":
