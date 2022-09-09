@@ -1,18 +1,17 @@
-const num1 = [];
-const num2 = [];
+const num1 = [0];
+const num2 = [0];
 let  operator = null; 
 
-const operate = (operand, num1, num2) => {
-
+const operate = (operand, num1 = num1, num2 = num2) => {
     switch (operand) {
         case "add":
-            return num1 + num2;
+            return parseInt(num1.join("")) + parseInt(num2.join(""));
         case "subtract":
-            return num1 - num2;
+            return parseInt(num1.join("")) - parseInt(num2.join(""));
         case "multiply":
-            return num1 * num2;
+            return parseInt(num1.join("")) * parseInt(num2.join(""));
         case "divide":
-            return num1 / num2;
+            return parseInt(num1.join("")) / parseInt(num2.join("")); 
     };
 };
 
@@ -25,8 +24,6 @@ numBtns.forEach(element => {
         } else {
             num2.push(element.textContent);
         };
-        console.log(num1)
-        console.log(num2)
         });
     });
 
@@ -34,5 +31,9 @@ numBtns.forEach(element => {
 const operandbuttons = document.querySelectorAll(".operan-btn");
 operandbuttons.forEach(element => {
     element.addEventListener("click", () => {
+        if(element.textContent === "=" && operator === null){
+            console.log(parseInt(num1.join("")))
+        } 
+        
     })
 })
