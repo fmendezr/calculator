@@ -1,17 +1,17 @@
-const num1 = [0];
-const num2 = [0];
+let num1 = [0];
+let num2 = [];
 let  operator = null; 
 
-const operate = (operand, num1 = num1, num2 = num2) => {
+const operate = (operand, numA = num1, numB = num2) => {
     switch (operand) {
         case "add":
-            return parseInt(num1.join("")) + parseInt(num2.join(""));
+            return  parseInt(numA.join("")) + parseInt(numB.join(""));
         case "subtract":
-            return parseInt(num1.join("")) - parseInt(num2.join(""));
+            return parseInt(numA.join("")) - parseInt(numB.join(""));
         case "multiply":
-            return parseInt(num1.join("")) * parseInt(num2.join(""));
+            return parseInt(numA.join("")) * parseInt(numB.join(""));
         case "divide":
-            return parseInt(num1.join("")) / parseInt(num2.join("")); 
+            return parseInt(numA.join("")) / parseInt(numB.join("")); 
     };
 };
 
@@ -31,9 +31,13 @@ numBtns.forEach(element => {
 const operandbuttons = document.querySelectorAll(".operan-btn");
 operandbuttons.forEach(element => {
     element.addEventListener("click", () => {
-        if(element.textContent === "=" && operator === null){
-            console.log(parseInt(num1.join("")))
-        } 
-        
+        if(num2.length == 0){
+            operator = element.id;
+        } else {
+            num1 = ((operate(operator)).toString()).split('');
+            operator = element.id;
+            num2 = [];
+            console.log(num1)
+        }
     })
 })
