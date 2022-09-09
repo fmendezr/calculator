@@ -39,8 +39,8 @@ operandbuttons.forEach(element => {
             operator = element.id;
             num2 = [];
         }
-    })
-})
+    });
+});
 
 // Event listener that deals with equal button 
 const equalBtn = document.querySelector(".equal-btn");
@@ -49,5 +49,13 @@ equalBtn.addEventListener("click", () => {
         num1 = ((operate(operator)).toString()).split('');
         operator = null;
         num2 = [];
-    }
-})
+    };
+});
+
+// Event listener for when clear is clicked  
+const clearBtn = document.getElementById("result");
+clearBtn.addEventListener("click", () => {
+    num1 = [0];
+    num2 = [];
+    operator = null;
+});
