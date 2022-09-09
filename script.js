@@ -1,6 +1,6 @@
 const num1 = [];
 const num2 = [];
-const  operator = undefined; 
+const  operator = '/'; 
 
 const operate = (operand, num1, num2) => {
     switch (operand) {
@@ -21,8 +21,14 @@ const multiply = document.getElementById("multiply");
 const drugs = () => {
     numBtns.forEach(element => {
         element.addEventListener("click", () => {
+            if(operator === null){
+                num1.push(element.textContent);
+            } else {
+                num2.push(element.textContent)
+            }
+            console.log(num1)
+            console.log(num2)
         })
-        console.log(element.textContent)
     })
 }
 
