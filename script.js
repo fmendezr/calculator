@@ -27,7 +27,7 @@ numBtns.forEach(element => {
         });
     });
 
-// Event listener that when operand is clicked assigs it to operator button
+// Event listener that when operand is clicked assigs it to operator and deals with mili operator statements 
 const operandbuttons = document.querySelectorAll(".operan-btn");
 operandbuttons.forEach(element => {
     element.addEventListener("click", () => {
@@ -37,7 +37,16 @@ operandbuttons.forEach(element => {
             num1 = ((operate(operator)).toString()).split('');
             operator = element.id;
             num2 = [];
-            console.log(num1)
         }
     })
+})
+
+// Event listener that deals with equal button 
+const equalBtn = document.querySelector(".equal-btn");
+equalBtn.addEventListener("click", () => {
+    if(num2.length > 0){
+        num1 = ((operate(operator)).toString()).split('');
+        operator = null;
+        num2 = [];
+    }
 })
