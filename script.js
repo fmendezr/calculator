@@ -45,6 +45,7 @@ operandbuttons.forEach(element => {
             num1 = ((operate(operator)).toString()).split('');
             operator = element.id;
             num2 = [];
+            display.innerHTML = parseInt(num1.join(""))
         }
     });
 });
