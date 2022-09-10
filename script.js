@@ -3,7 +3,7 @@ let num2 = [];
 let  operator = null;  
 
 //set up for display 
-const display = document.getElementById("display");
+const display = document.getElementById("lower-display");
 display.innerHTML = num1.join("");
 
 // make operations with two numbers
