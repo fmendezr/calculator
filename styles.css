@@ -1,3 +1,5 @@
+/* General Calculator styling */
+
 #calculator {
     padding: 10px 0px;
     display: flex;
@@ -9,11 +11,33 @@
     background-color: red;
 }
 
+/* Display */
+
 #display-container {
     height: 180px;
     width: 400px;
     background-color: aqua;
 }
+
+#upper-display-container {
+    margin-top: 20px;
+    background-color: violet;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#lower-display-container {
+    background-color: blanchedalmond;
+    height: 55%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* Keyboard */
 
 #keyboard-top {
     display: flex;
