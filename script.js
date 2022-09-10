@@ -73,7 +73,7 @@ clearBtn.addEventListener("click", () => {
 // Add functionality to delete button 
 const deleteBtn = document.getElementById("delete");
 deleteBtn.addEventListener("click", () => {
-    if(operand == nulll){
+    if(operator == null){
         num1 = [0];
         display.innerHTML = num1.join("");
     } else if (operand !=  null || num2.length > 0){
