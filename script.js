@@ -76,7 +76,7 @@ deleteBtn.addEventListener("click", () => {
     if(operator == null){
         num1 = [0];
         display.innerHTML = num1.join("");
-    } else if (operand !=  null || num2.length > 0){
+    } else if (operator !=  null || num2.length > 0){
         num2 = [];
         display.innerHTML = 0;
     };
