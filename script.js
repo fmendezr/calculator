@@ -12,6 +12,7 @@ const operate = (operand, numA = num1, numB = num2) => {
         case "multiply":
             return parseInt(numA.join("")) * parseInt(numB.join(""));
         case "divide":
+            if(parseInt(numB.join("")) != 0){}
             return parseInt(numA.join("")) / parseInt(numB.join("")); 
     };
 };
@@ -65,5 +66,7 @@ const deleteBtn = document.getElementById("delete");
 deleteBtn.addEventListener("click", () => {
     if(operand == nulll){
         num1 = [0];
+    } else if (operand !=  null || num2.length > 0){
+        num2 = [];
     };
-}) 
+});
