@@ -1,6 +1,9 @@
 let num1 = [0];
 let num2 = [];
-let  operator = null; 
+let  operator = null;  
+
+//set up for display 
+const display = document.getElementById("display");
 
 // make operations with two numbers
 const operate = (operand, numA = num1, numB = num2) => {
@@ -23,8 +26,10 @@ numBtns.forEach(element => {
      element.addEventListener("click", () => {
         if(operator === null){
             num1.push(element.textContent);
+            display.innerHTML = parseInt(num1.join(""))
         } else {
             num2.push(element.textContent);
+            display.innerHTML = parseInt(num2.join(""))
         };
         });
     });
