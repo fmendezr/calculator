@@ -19,6 +19,8 @@
     background-color: aqua;
 }
 
+/* Upper part of display */
+
 #upper-display-container {
     margin-top: 20px;
     background-color: violet;
@@ -28,6 +30,8 @@
     align-items: flex-end;
     justify-content: flex-end;
 }
+
+/* Lower part of the display */
 
 #lower-display-container {
     background-color: blanchedalmond;

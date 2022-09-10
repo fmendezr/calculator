@@ -2,9 +2,12 @@ let num1 = [0];
 let num2 = [];
 let  operator = null;  
 
-//set up for display 
+// set up lower display 
 const display = document.getElementById("lower-display");
-display.innerHTML = num1.join("");
+display.innerHTML = num1.join(""); 
+
+// set up upper display 
+const upperDisplay = document.getElementById("upper-display");
 
 // make operations with two numbers
 const operate = (operand, numA = num1, numB = num2) => {
@@ -41,11 +44,13 @@ operandbuttons.forEach(element => {
     element.addEventListener("click", () => {
         if(num2.length == 0){
             operator = element.id;
+            upperDisplay .innerHTML = parseInt(num1.join('')) + " " + element.textContent;
         } else {
             num1 = ((operate(operator)).toString()).split('');
             operator = element.id;
             num2 = [];
             display.innerHTML = num1.join("");
+            upperDisplay.innerHTML = num1.join("") + " " + element.textContent;
         }
     });
 });
@@ -54,7 +59,9 @@ operandbuttons.forEach(element => {
 const equalBtn = document.querySelector(".equal-btn");
 equalBtn.addEventListener("click", () => {
     if(num2.length > 0){
-        num1 = ((operate(operator)).toString()).split('');
+        result = ((operate(operator)).toString()).split('');
+        upperDisplay.innerHTML = parseInt(num1.join("")) + " " + document.getElementById(operator).textContent + " " + parseInt(num2.join("")) + " =";
+        num1 = result;
         operator = null;
         num2 = [];
         display.innerHTML = num1.join("");
@@ -68,6 +75,7 @@ clearBtn.addEventListener("click", () => {
     num2 = [];
     operator = null;
     display.innerHTML = num1.join("");
+    upperDisplay.innerHTML = "";
 });
 
 // Add functionality to delete button 
