@@ -4,6 +4,7 @@ let  operator = null;
 
 //set up for display 
 const display = document.getElementById("display");
+display.innerHTML = num1.join("");
 
 // make operations with two numbers
 const operate = (operand, numA = num1, numB = num2) => {
@@ -59,11 +60,12 @@ equalBtn.addEventListener("click", () => {
 });
 
 // Add functinoality to clear button
-const clearBtn = document.getElementById("result");
+const clearBtn = document.getElementById("clear");
 clearBtn.addEventListener("click", () => {
     num1 = [0];
     num2 = [];
     operator = null;
+    display.innerHTML = num1.join("");
 });
 
 // Add functionality to delete button 
