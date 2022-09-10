@@ -16,7 +16,7 @@ const operate = (operand, numA = num1, numB = num2) => {
     };
 };
 
-// Event listener that when number is clicked assigns its value to num1/num2
+// Add functionality to all number buttons 
 const numBtns = document.querySelectorAll(".num-btn");
 numBtns.forEach(element => {
      element.addEventListener("click", () => {
@@ -28,7 +28,7 @@ numBtns.forEach(element => {
         });
     });
 
-// Event listener that when operand is clicked assigs it to operator and deals with mili operator statements 
+// Add funcitonality to all operand buttons (+, -, *, /)
 const operandbuttons = document.querySelectorAll(".operan-btn");
 operandbuttons.forEach(element => {
     element.addEventListener("click", () => {
@@ -42,7 +42,7 @@ operandbuttons.forEach(element => {
     });
 });
 
-// Event listener that deals with equal button 
+// Add functionality to equal button
 const equalBtn = document.querySelector(".equal-btn");
 equalBtn.addEventListener("click", () => {
     if(num2.length > 0){
@@ -52,10 +52,18 @@ equalBtn.addEventListener("click", () => {
     };
 });
 
-// Event listener for when clear is clicked  
+// Add functinoality to clear button
 const clearBtn = document.getElementById("result");
 clearBtn.addEventListener("click", () => {
     num1 = [0];
     num2 = [];
     operator = null;
 });
+
+// Add functionality to delete button 
+const deleteBtn = document.getElementById("delete");
+deleteBtn.addEventListener("click", () => {
+    if(operand == nulll){
+        num1 = [0];
+    };
+}) 
