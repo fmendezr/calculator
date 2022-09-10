@@ -45,7 +45,7 @@ operandbuttons.forEach(element => {
             num1 = ((operate(operator)).toString()).split('');
             operator = element.id;
             num2 = [];
-            display.innerHTML = parseInt(num1.join(""))
+            display.innerHTML = num1.join("");
         }
     });
 });
@@ -57,6 +57,7 @@ equalBtn.addEventListener("click", () => {
         num1 = ((operate(operator)).toString()).split('');
         operator = null;
         num2 = [];
+        display.innerHTML = num1.join("");
     };
 });
 
