@@ -1,0 +1,41 @@
+#calculator {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 610px;
+    width: 450px;
+    background-color: red;
+}
+
+#display-container {
+    height: 180px;
+    width: 400px;
+    background-color: aqua;
+}
+
+#keyboard-top {
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    gap: 10px;
+}
+
+#keyboard-top > * {
+    flex-basis: 195px;
+    height: 70px;
+}
+
+#keyboard-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
+}
+
+#keyboard-bottom > button {
+    flex-basis: 92px;
+    height: 70px;
+}
