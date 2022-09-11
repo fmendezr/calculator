@@ -88,10 +88,17 @@ clearBtn.addEventListener("click", () => {
 const deleteBtn = document.getElementById("delete");
 deleteBtn.addEventListener("click", () => {
     if(operator == null){
-        num1 = [0];
-        display.innerHTML = num1.join("");
-    } else if (operator !=  null || num2.length > 0){
-        num2 = [];
-        display.innerHTML = 0;
+        if (num1.length > 1){
+            num1.pop();
+            display.innerHTML = parseInt(num1.join(""));
+        };
+    } else if (operator !=  null){
+        if (num2.length > 1){
+            num2.pop();
+            display.innerHTML = parseInt(num2.join(""));
+        } else {
+            num2 = [];
+            display.innerHTML = 0;
+        };
     };
 });
