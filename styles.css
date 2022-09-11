@@ -98,4 +98,14 @@ button {
 
 /* footer */ 
 
+p {
+    font-family: monaco;
+}
 
+i {
+    font-size: 30px;
+}
+
+a:visited {
+    color:black;
+}
