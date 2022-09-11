@@ -1,6 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* General Calculator styling */
 
 #calculator {
+    margin-top: 30px;
+    margin-bottom: 20px;
     padding: 10px 0px;
     display: flex;
     flex-direction: column;
