@@ -46,11 +46,15 @@ operandbuttons.forEach(element => {
             operator = element.id;
             upperDisplay .innerHTML = parseInt(num1.join('')) + " " + element.textContent;
         } else {
+            if (operator === "divide" && parseInt(num2.join("")) == 0){
+                display.innerHTML = "You can't divide by zero!";
+            } else {
             num1 = ((operate(operator)).toString()).split('');
             operator = element.id;
             num2 = [];
             display.innerHTML = num1.join("");
             upperDisplay.innerHTML = num1.join("") + " " + element.textContent;
+            }
         }
     });
 });
@@ -58,14 +62,16 @@ operandbuttons.forEach(element => {
 // Add functionality to equal button
 const equalBtn = document.querySelector(".equal-btn");
 equalBtn.addEventListener("click", () => {
-    if(num2.length > 0){
+    if (parseInt(num2.join("")) === 0){
+        display.innerHTML = "You can't divide by zero!";
+    } else if(num2.length > 0 ){
         result = ((operate(operator)).toString()).split('');
         upperDisplay.innerHTML = parseInt(num1.join("")) + " " + document.getElementById(operator).textContent + " " + parseInt(num2.join("")) + " =";
         num1 = result;
         operator = null;
         num2 = [];
         display.innerHTML = num1.join("");
-    };
+    } 
 });
 
 // Add functinoality to clear button
