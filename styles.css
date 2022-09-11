@@ -8,14 +8,9 @@
     justify-content: space-evenly;
     height: 610px;
     width: 450px;
-    background-color: red;
+    background-color: #F06262;
     border: 3px solid black;
     border-radius: 15px;
-}
-
-button {
-    border: 3px solid black;
-    border-radius: 10px;
 }
 
 /* Display */
@@ -23,7 +18,7 @@ button {
 #display-container {
     height: 180px;
     width: 400px;
-    background-color: aqua;
+    background-color: white;
     border: 3px solid black;
     border-radius: 10px;
 }
@@ -32,7 +27,6 @@ button {
 
 #upper-display-container {
     margin-top: 20px;
-    background-color: violet;
     height: 25%;
     width: 100%;
     display: flex;
@@ -40,18 +34,30 @@ button {
     justify-content: flex-end;
 }
 
+#upper-display {
+    font-family: monaco;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 25px;;
+}
+
 /* Lower part of the display */
 
 #lower-display-container {
-    background-color: blanchedalmond;
     height: 55%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
 
-/* Keyboard */
+#lower-display {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family: monaco;
+    font-size: 35px;
+}
 
+/* Keyboard */
 #keyboard-top {
     display: flex;
     width: 450px;
@@ -62,6 +68,7 @@ button {
 #keyboard-top > * {
     flex-basis: 195px;
     height: 70px;
+
 }
 
 #keyboard-bottom {
@@ -76,3 +83,16 @@ button {
     flex-basis: 92px;
     height: 70px;
 }
+
+button {
+    border: 3px solid black;
+    border-radius: 10px;
+    font-family: monaco;
+    font-size: 20px;
+}
+
+#clear, #delete {
+    background-color: #9E2D2D;
+    color:white;
+}
+
